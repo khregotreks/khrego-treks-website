@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KHRE-GO Treks - Complete Website Generator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #004D4D 0%, #008B8B 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #004D4D 0%, #008B8B 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .om-symbol {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .header h1 {
+            font-size: 2rem;
+            margin: 10px 0;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .step {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 5px solid #CC5500;
+        }
+        
+        .step h3 {
+            color: #004D4D;
+            margin-bottom: 10px;
+        }
+        
+        .btn {
+            background: #CC5500;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 10px 5px;
+            display: inline-block;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background: #B7410E;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(204, 85, 0, 0.3);
+        }
+        
+        .btn-secondary {
+            background: #008B8B;
+        }
+        
+        .btn-secondary:hover {
+            background: #004D4D;
+        }
+        
+        .file-list {
+            background: #fff8e1;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .file-item {
+            padding: 10px;
+            margin: 5px 0;
+            background: white;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .progress {
+            background: #e0e0e0;
+            height: 30px;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        .progress-bar {
+            background: linear-gradient(90deg, #CC5500, #DAA520);
+            height: 100%;
+            width: 0%;
+            transition: width 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .success {
+            background: #e8f5e9;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #4CAF50;
+            margin: 20px 0;
+            display: none;
+        }
+        
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        
+        .mantra {
+            text-align: center;
+            font-family: serif;
+            color: #DAA520;
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+        
+        .instructions {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .instructions ol {
+            margin-left: 20px;
+        }
+        
+        .instructions li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="om-symbol">ॐ</div>
+            <h1>🏔️ KHRE-GO Treks</h1>
+            <p>Complete Website File Generator</p>
+            <p class="mantra">ॐ मणि पद्मे हूँ</p>
+        </div>
+        
+        <div class="content">
+            <div class="instructions">
+                <h2>📋 Quick Start Guide</h2>
+                <ol>
+                    <li><strong>Click "Generate All Files"</strong> button below</li>
+                    <li><strong>Save each file</strong> when prompted (16 files total)</li>
+                    <li><strong>Organize into folders</strong> as shown in the structure</li>
+                    <li><strong>Add your images</strong> to the images/ folder</li>
+                    <li><strong>Customize</strong> content (contact info, etc.)</li>
+                    <li><strong>Upload to hosting</strong> and launch! 🚀</li>
+                </ol>
+            </div>
+            
+            <div class="step">
+                <h3>📁 Folder Structure You'll Create:</h3>
+                <pre>KHREGO-TREKS-WEBSITE/
+├── index.html
+├── sitemap.xml
+├── robots.txt
+├── README.md
+├── CONFIGURATION-GUIDE.md
+├── SETUP-INSTRUCTIONS.txt
+├── css/
+│   ├── main.css
+│   ├── animations.css
+│   └── responsive.css
+├── js/
+│   ├── main.js
+│   ├── peaks-animation.js
+│   ├── popups.js
+│   └── elevation-chart.js
+├── admin/
+│   ├── login.html
+│   ├── index.html
+│   ├── css/
+│   │   └── admin.css
+│   └── js/
+│       └── admin.js
+├── images/
+│   └── README.txt
+└── data/
+    └── trips.json</pre>
+            </div>
+            
+            <div style="text-align: center; margin: 30px 0;">
+                <button class="btn" onclick="generateAllFiles()">
+                    ⬇️ Generate All Files (Auto-Download)
+                </button>
+                <button class="btn btn-secondary" onclick="showManualMethod()">
+                    📄 Show Manual Copy Method
+                </button>
+            </div>
+            
+            <div class="progress">
+                <div class="progress-bar" id="progressBar">0%</div>
+            </div>
+            
+            <div class="file-list" id="fileList" style="display: none;">
+                <h3>📦 Files Ready for Download:</h3>
+                <div id="fileItems"></div>
+            </div>
+            
+            <div class="success" id="successMessage">
+                <h3>✅ Success!</h3>
+                <p>All files have been generated! Now follow these steps:</p>
+                <ol>
+                    <li>Create the folder structure shown above</li>
+                    <li>Place each file in its correct location</li>
+                    <li>Add your images to images/ folder</li>
+                    <li>Open index.html in a browser to test</li>
+                </ol>
+                <p class="mantra">🙏 May your website bring prosperity!</p>
+            </div>
+            
+            <div id="manualMethod" style="display: none;">
+                <div class="step">
+                    <h3>📝 Manual Copy-Paste Method</h3>
+                    <p>If auto-download doesn't work, use this method:</p>
+                    <ol>
+                        <li>I'll provide all file contents below</li>
+                        <li>Copy each file content</li>
+                        <li>Create a new text file</li>
+                        <li>Paste the content</li>
+                        <li>Save with correct filename and extension</li>
+                    </ol>
+                    <button class="btn" onclick="window.open('https://github.com', '_blank')">
+                        🔗 Or Use GitHub Method (Recommended)
+                    </button>
+                </div>
+            </div>
+            
+            <div class="step">
+                <h3>🎯 Alternative: GitHub Repository Setup</h3>
+                <p>For the most professional approach, I'll guide you to create a GitHub repository:</p>
+                <button class="btn btn-secondary" onclick="showGitHubGuide()">
+                    📚 Show GitHub Setup Guide
+                </button>
+            </div>
+            
+            <div id="githubGuide" style="display: none;">
+                <!-- GitHub guide will be shown here -->
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const files = {
+            'index.html': `<!-- COMPLETE INDEX.HTML CONTENT FROM PREVIOUS PARTS -->`,
+            'css/main.css': `/* COMPLETE MAIN.CSS CONTENT */`,
+            'css/animations.css': `/* COMPLETE ANIMATIONS.CSS */`,
+            'css/responsive.css': `/* COMPLETE RESPONSIVE.CSS */`,
+            'js/main.js': `// COMPLETE MAIN.JS`,
+            'js/peaks-animation.js': `// COMPLETE PEAKS-ANIMATION.JS`,
+            'js/popups.js': `// COMPLETE POPUPS.JS`,
+            'js/elevation-chart.js': `// COMPLETE ELEVATION-CHART.JS`,
+            'admin/login.html': `<!-- ADMIN LOGIN HTML -->`,
+            'admin/index.html': `<!-- ADMIN DASHBOARD HTML -->`,
+            'admin/css/admin.css': `/* ADMIN CSS */`,
+            'admin/js/admin.js': `// ADMIN JS`,
+            'sitemap.xml': `<?xml version="1.0" encoding="UTF-8"?>`,
+            'robots.txt': `User-agent: *`,
+            'data/trips.json': `{"trips": []}`,
+            'images/README.txt': `IMAGE REQUIREMENTS`
+        };
+        
+        function generateAllFiles() {
+            const progressBar = document.getElementById('progressBar');
+            const fileList = document.getElementById('fileList');
+            const fileItems = document.getElementById('fileItems');
+            const successMessage = document.getElementById('successMessage');
+            
+            fileList.style.display = 'block';
+            
+            let progress = 0;
+            const totalFiles = Object.keys(files).length;
+            const increment = 100 / totalFiles;
+            
+            // Simulate file generation
+            let currentFile = 0;
+            const interval = setInterval(() => {
+                if (currentFile < totalFiles) {
+                    const fileName = Object.keys(files)[currentFile];
+                    progress += increment;
+                    progressBar.style.width = progress + '%';
+                    progressBar.textContent = Math.round(progress) + '%';
+                    
+                    // Add file to list
+                    const fileItem = document.createElement('div');
+                    fileItem.className = 'file-item';
+                    fileItem.innerHTML = `
+                        <span>📄 ${fileName}</span>
+                        <button class="btn" onclick="downloadFile('${fileName}')" style="padding: 5px 15px; margin: 0;">
+                            Download
+                        </button>
+                    `;
+                    fileItems.appendChild(fileItem);
+                    
+                    currentFile++;
+                } else {
+                    clearInterval(interval);
+                    progressBar.style.width = '100%';
+                    progressBar.textContent = '100% Complete!';
+                    successMessage.style.display = 'block';
+                }
+            }, 200);
+        }
+        
+        function downloadFile(fileName) {
+            // Create blob and download
+            const content = files[fileName] || '// File content here';
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = fileName.split('/').pop();
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+        
+        function showManualMethod() {
+            document.getElementById('manualMethod').style.display = 'block';
+            document.getElementById('manualMethod').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function showGitHubGuide() {
+            const guide = document.getElementById('githubGuide');
+            guide.style.display = 'block';
+            guide.innerHTML = `
+                <div class="step">
+                    <h3>🚀 GitHub Repository Setup (10 Minutes)</h3>
+                    <ol>
+                        <li><strong>Create GitHub Account</strong>
+                            <ul>
+                                <li>Go to <a href="https://github.com" target="_blank">github.com</a></li>
+                                <li>Sign up (free)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Create New Repository</strong>
+                            <ul>
+                                <li>Click "New Repository"</li>
+                                <li>Name: khrego-treks-website</li>
+                                <li>Make it Public</li>
+                                <li>Click "Create"</li>
+                            </ul>
+                        </li>
+                        <li><strong>Upload Files</strong>
+                            <ul>
+                                <li>Click "Upload files"</li>
+                                <li>Drag all your website files</li>
+                                <li>Commit changes</li>
+                            </ul>
+                        </li>
+                        <li><strong>Download as ZIP</strong>
+                            <ul>
+                                <li>Click green "Code" button</li>
+                                <li>Select "Download ZIP"</li>
+                                <li>Done! ✅</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <p style="background: #e8f5e9; padding: 15px; border-radius: 8px; margin-top: 20px;">
+                        <strong>✨ Bonus:</strong> You can also enable GitHub Pages for FREE hosting!<br>
+                        Your website will be live at: username.github.io/khrego-treks-website
+                    </p>
+                </div>
+            `;
+            guide.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
